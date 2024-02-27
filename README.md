@@ -69,3 +69,8 @@ Find the sibling of a node.
 
 18. Uncle: 18-binary_tree_uncle.c
 Find the uncle of a node.
+
+## Authors
+
+- **Rawan omer** - [Rawan GitHub Profile](https://github.com/rawan-omer)
+- **Samia Asim** - [Samia GitHub Profile](https://github.com/Samia8Asim)
