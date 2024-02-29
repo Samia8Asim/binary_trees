@@ -8,15 +8,15 @@
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-    size_t left_height, right_height;
+	size_t left_height, right_height;
 
-    if (tree == NULL)
-        return (0);
+	if (tree == NULL)
+		return (0);
 
-    left_height = binary_tree_height(tree->left);
-    right_height = binary_tree_height(tree->right);
+	left_height = binary_tree_height(tree->left);
+	right_height = binary_tree_height(tree->right);
 
-    return (1 + (left_height > right_height ? left_height : right_height));
+	return (1 + (left_height > right_height ? left_height : right_height));
 }
 
 /**
@@ -27,10 +27,10 @@ size_t binary_tree_height(const binary_tree_t *tree)
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-    size_t height = binary_tree_height(tree);
-    size_t nodes = binary_tree_size(tree);
+	size_t height = binary_tree_height(tree);
+	size_t nodes = binary_tree_size(tree);
 
-    return (binary_tree_is_perfect_util(tree, height, 0, nodes));
+	return (binary_tree_is_perfect_util(tree, height, 0, nodes));
 }
 
 /**
@@ -41,10 +41,10 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
  */
 size_t binary_tree_size(const binary_tree_t *tree)
 {
-    if (tree == NULL)
-        return (0);
+	if (tree == NULL)
+		return (0);
 
-    return (1 + binary_tree_size(tree->left) + binary_tree_size(tree->right));
+	return (1 + binary_tree_size(tree->left) + binary_tree_size(tree->right));
 }
 
 /**
@@ -57,17 +57,17 @@ size_t binary_tree_size(const binary_tree_t *tree)
  * Return: 1 if perfect, 0 otherwise
  */
 int binary_tree_is_perfect_util(
-    const binary_tree_t *tree, size_t height, size_t level, size_t nodes)
+	const binary_tree_t *tree, size_t height, size_t level, size_t nodes)
 {
-    if (tree == NULL)
-        return (1);
+	if (tree == NULL)
+		return (1);
 
-    if (tree->left == NULL && tree->right == NULL)
-        return (height == level + 1);
+	if (tree->left == NULL && tree->right == NULL)
+		return (height == level + 1);
 
-    if (tree->left == NULL || tree->right == NULL)
-        return (0);
+	if (tree->left == NULL || tree->right == NULL)
+		return (0);
 
-    return (binary_tree_is_perfect_util(tree->left, height, level + 1, nodes) &&
-            binary_tree_is_perfect_util(tree->right, height, level + 1, nodes));
+	return (binary_tree_is_perfect_util(tree->left, height, level + 1, nodes) &&
+		binary_tree_is_perfect_util(tree->right, height, level + 1, nodes));
 }
