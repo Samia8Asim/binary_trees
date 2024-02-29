@@ -26,7 +26,6 @@ typedef struct binary_tree_s avl_t;
 typedef struct binary_tree_s heap_t;
 
 size_t binary_tree_height(const binary_tree_t *tree);
-int binary_tree_is_perfect(const binary_tree_t *tree);
 size_t binary_tree_size(const binary_tree_t *tree);
 int binary_tree_is_perfect_util(const binary_tree_t *tree, size_t height, size_t level, size_t nodes);
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
