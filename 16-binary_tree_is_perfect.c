@@ -48,7 +48,7 @@ size_t binary_tree_size(const binary_tree_t *tree)
 }
 
 /**
- * binary_tree_is_perfect_util - Utility function to check if a binary tree is perfect
+ * binary_tree_is_perfect_util - function to check if binary tree is perfect
  * @tree: Pointer to the root node of the tree to check
  * @height: Height of the tree
  * @level: Current level being checked
